@@ -12,7 +12,7 @@ jobs:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           pip install -r requirements.txt
-          python train.py depth = 5
+          python train.py depth = 6
 
           cat metrics.txt >> report.md
           cml-publish confusion_matrix.png --md >> report.md
